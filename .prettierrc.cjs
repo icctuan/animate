@@ -17,8 +17,8 @@ module.exports = {
 	trailingComma: 'none',
 	// 大括号内的首尾需要空格
 	bracketSpacing: true,
-	// jsx 标签的反尖括号需要换行
-	jsxBracketSameLine: false,
+	// // jsx 标签的反尖括号需要换行
+	// jsxBracketSameLine: false,
 	// 箭头函数，尽可能的省略括号
 	arrowParens: 'avoid',
 	// 每个文件格式化的范围是文件的全部内容
