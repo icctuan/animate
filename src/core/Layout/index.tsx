@@ -11,6 +11,7 @@ const Layout: FC<any> = () => {
 	return (
 		<div className={styles.layout}>
 			{/* 基本布局样式 */}
+			<div className={styles.header}>title</div>
 			{ele}
 		</div>
 	)

@@ -10,19 +10,26 @@ function Dashboard() {
 	return (
 		<div className={styles.wrapper}>
 			<div>
-				<p className={styles.paragraph}>文字</p>
-				<WaveText />
-				<WaterDrops />
-				<p className={styles.paragraph}>SVG</p>
-				<div>
-					<CheckTick />
+				<p className={styles.paragraph}>Hover</p>
+				<div className={styles.ge}>
+					<WaveText />
 				</div>
+
+				<p className={styles.paragraph}>自执行动画</p>
+				<div className={styles.ge}>
+					<WaterDrops />
+				</div>
+
 				<p className={styles.paragraph}>图片</p>
-				<p>长图自动滚动</p>
 				<div className={styles.landing}>
 					{fakeList.map(item => (
 						<LandingPage options={item} key={item.id} />
 					))}
+				</div>
+
+				<p className={styles.paragraph}>SVG</p>
+				<div className={styles.ge}>
+					<CheckTick />
 				</div>
 			</div>
 		</div>
