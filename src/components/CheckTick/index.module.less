@@ -1,0 +1,66 @@
+.wrapper {
+	width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	// position: relative;
+
+	// svg {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// }
+
+	h2 {
+		font-family: Helvetica;
+		font-size: 26px;
+		color: #333;
+	}
+
+	svg .circle {
+		animation: circle 1s ease-in-out;
+	}
+
+	svg .tick {
+		animation: tick 0.8s ease-in-out;
+	}
+
+	.circle {
+		stroke-dasharray: 1194; // 虚线 190 * 2 * π
+		stroke-dashoffset: 0; // 1194 -> 0 顺时针灰置 1194-2388 逆时针绘制
+	}
+
+	.tick {
+		stroke-dasharray: 350;
+		stroke-dashoffset: 0; // 350 -> 0
+	}
+
+	.noneCircle {
+		stroke-dasharray: 1194; // 虚线 190 * 2 * π
+		stroke-dashoffset: 1194; // 1194 -> 0 顺时针灰置 1194-2388 逆时针绘制
+	}
+
+	.noneTick {
+		stroke-dasharray: 350;
+		stroke-dashoffset: 350; // 350 -> 0
+	}
+
+	@keyframes circle {
+		from {
+			stroke-dashoffset: 1194;
+		}
+		to {
+			stroke-dashoffset: 2388;
+		}
+	}
+
+	@keyframes tick {
+		from {
+			stroke-dashoffset: 350;
+		}
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+}
